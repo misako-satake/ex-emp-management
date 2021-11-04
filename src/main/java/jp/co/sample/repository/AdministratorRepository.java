@@ -1,6 +1,7 @@
 package jp.co.sample.repository;
+
 /**
- *  @author satakemisako
+* *  @author satakemisako
  *  管理者のリポジトリクラス
  *  管理者情報の挿入、メアドとパスワードからの管理者情報取得メソッドを含む
  *  
