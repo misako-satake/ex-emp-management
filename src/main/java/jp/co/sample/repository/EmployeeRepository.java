@@ -32,10 +32,10 @@ public class EmployeeRepository {
 	private NamedParameterJdbcTemplate template;
 	
 	public List<Employee> findAll(){
-		String sql = "SELECT id,name,image,gender,hireDate,mailAddress,"
-				+ "zipCode,address,telephone,salary,characteristics,dependentsCount "
+		String sql = "SELECT id,name,image,gender,hire_date,mail_address,"
+				+ "zip_code,address,telephone,salary,characteristics,dependents_count "
 				+ "FROM employees "
-				+ "ORDER BY hireDate DESC;";
+				+ "ORDER BY hire_date DESC;";
 		
 		
 		List<Employee> employeeList = template.query(sql, EMPLOYEE_ROW_MAPPER);
@@ -44,8 +44,8 @@ public class EmployeeRepository {
 	}
 	
 	public Employee load(Integer id) {
-		String sql = "SELECT id,name,image,gender,hireDate,mailAddress,"
-				+ "zipCode,address,telephone,salary,characteristics,dependentsCount "
+		String sql = "SELECT id,name,image,gender,hire_date,mail_address,"
+				+ "zip_code,address,telephone,salary,characteristics,dependents_count "
 				+ "FROM employees "
 				+ "WHERE id=:id;";
 		
@@ -58,9 +58,9 @@ public class EmployeeRepository {
 	
 	public void update(Employee employee) {
 		String sql = "UPDATE employees "
-				+ "SET name=:name,image=:image,gender=:gender,hireDate=:hireDate,"
-				+ "mailAddress=:mailAddress,zipCode=:zipCode,address=:address,telephone=:telephone,"
-				+ "salary=:salary,characteristics=:characteristics,dependentsCount=:dependentsCount "
+				+ "SET name=:name,image=:image,gender=:gender,hire_date=:hireDate,"
+				+ "mail_address=:mailAddress,zip_code=:zipCode,address=:address,telephone=:telephone,"
+				+ "salary=:salary,characteristics=:characteristics,dependents_count=:dependentsCount "
 				+ "WHERE id=:id;";
 		
 		SqlParameterSource param = new BeanPropertySqlParameterSource(employee);

@@ -36,8 +36,8 @@ public class AdministratorRepository {
 	private NamedParameterJdbcTemplate template;
 	
 	public void insert(Administrator administrator) {
-		String sql = "INSERT INTO administrators(id,name,mailAddress,password) "
-				+ "VALUES(:id,:name,:mailAddress,:password);";
+		String sql = "INSERT INTO administrators(name,mail_address,password) "
+				+ "VALUES(:name,:mailAddress,:password);";
 		
 		SqlParameterSource param = new BeanPropertySqlParameterSource(administrator);
 		
@@ -50,7 +50,7 @@ public class AdministratorRepository {
 	public  Administrator findByMailAddressAndPassword
 	(String mailAddress, String password) {
 		String sql = 
-				"SELECT id,name,mail_address,password FROM "
+				"SELECT name,mail_address,password FROM "
 				+ "administrators WHERE mail_address=:mailAddress AND password=:password";
 		
 		
