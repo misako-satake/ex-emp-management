@@ -16,7 +16,8 @@ import jp.co.sample.domain.Employee;
 
 /**
  * 
- * @author satakeyoshihito
+ * @author satakemisako
+ * 
  *
  */
 
