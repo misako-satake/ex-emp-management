@@ -38,12 +38,13 @@
 							</div>
 							<div class="form-group">
 								<label for="mailAddress">メールアドレス:</label>
-								<input type="text" name="mailAddress" id="mailAddress" class="form-control" placeholder="Email" th:field="*{mailAddress}">
+								<input type="text" name="mailAddress" id="mailAddress" class="form-control" placeholder="Email" th:field="*{mailAddress}" >
 							</div>
 							<div class="form-group">
 								<label for="inputPassword">パスワード:</label>
 								<input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" th:field="*{password}">
 							</div>
+							<p th:if="${errormessage != null}" th:text="${errormessage}"></p>
 							<div class="form-group">
 								<button type="submit" class="btn btn-primary">ログイン</button>
 							</div>

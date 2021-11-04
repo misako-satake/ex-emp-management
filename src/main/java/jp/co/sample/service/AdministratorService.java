@@ -1,8 +1,9 @@
 package jp.co.sample.service;
+
 /**
  * @author satakeyomisako
  * Administratorのサービスクラス
- * insertメソッドを含む
+ * insertメソッド、loginメソッドを含む
  */
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,4 +23,11 @@ public class AdministratorService {
 	public void insert(Administrator administrator) {
 		administratorRepository.insert(administrator);
 	}
+	
+	public Administrator login(String mailAddress,String password) {
+		Administrator administrator = administratorRepository.findByMailAddressAndPassword(mailAddress, password);
+		return administrator;
+	}
+	
+	
 }

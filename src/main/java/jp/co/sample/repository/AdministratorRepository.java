@@ -25,7 +25,6 @@ public class AdministratorRepository {
 	private static final RowMapper<Administrator> ADMINISTRATOR_MAPPER
 	=(rs,i)->{
 		Administrator administrator = new Administrator();
-		administrator.setId(rs.getInt("id"));
 		administrator.setMailAddress(rs.getString("mail_address"));
 		administrator.setName(rs.getString("name"));
 		administrator.setPassword(rs.getString("password"));
