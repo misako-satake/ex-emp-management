@@ -1,7 +1,7 @@
 package jp.co.sample.service;
 
 /**
- * @author satakeyomisako
+ * @author satakemisako
  * Administratorのサービスクラス
  * insertメソッド、loginメソッドを含む
  */

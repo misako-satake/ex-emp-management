@@ -63,6 +63,13 @@ public class AdministratorController {
 			return "forward:/";//RequestMappingのアドレスを指定
 		}
 		session.setAttribute("administratorName", administrator);
-		return "foward:/employee/showList";
+		return "forward:/employee/showList";
 	}
+	
+	@RequestMapping("/logout")
+	public String logout() {
+		session.invalidate();
+		return "forward:/";
+	}
+	
 }

@@ -1,6 +1,7 @@
 package jp.co.sample.service;
 /**
  * @author satakemisako
+
  * 従業員情報一覧を全件検索する業務処理を行うメソッドを含む
  * 
  */
@@ -25,5 +26,12 @@ public class EmployeeService {
 		return employeeList;
 	}
 	
+	public Employee showDetail(Integer id) {
+		Employee employee = employeeRepository.load(id);
+		return employee;
+	}
 	
+	public void update(Employee  employee) {
+		employeeRepository.update(employee);
+	}
 }

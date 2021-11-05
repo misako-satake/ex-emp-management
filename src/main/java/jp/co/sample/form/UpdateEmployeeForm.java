@@ -7,11 +7,11 @@ package jp.co.sample.form;
 public class UpdateEmployeeForm {
 
 	private String id;//従業員のID
-	private String departmentCount;//扶養人数
+	private String dependentsCount;//扶養人数
 	
 	@Override
 	public String toString() {
-		return "UpdateEmployeeForm [id=" + id + ", departmentCount=" + departmentCount + "]";
+		return "UpdateEmployeeForm [id=" + id + ", DependentsCount=" + dependentsCount + "]";
 	}
 	
 	public String getId() {
@@ -20,11 +20,11 @@ public class UpdateEmployeeForm {
 	public void setId(String id) {
 		this.id = id;
 	}
-	public String getDepartmentCount() {
-		return departmentCount;
+	public String getDependentsCount() {
+		return dependentsCount;
 	}
-	public void setDepartmentCount(String departmentCount) {
-		this.departmentCount = departmentCount;
+	public void setDependentsCount(String dependentsCount) {
+		this.dependentsCount = dependentsCount;
 	}
 	
 }
